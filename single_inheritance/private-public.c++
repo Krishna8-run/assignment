@@ -3,6 +3,11 @@ using namespace std;
 class Animal{
 private:
     int age; // Private member, not accessible outside this class
+public:
+      int setAge() {
+          age = 6;
+          return age; // Public method to set the private member
+      }
 };
 class Dog : public Animal {
 private:
@@ -18,6 +23,8 @@ public:
               // age = 5; // Error: 'age' is private in 'Animal'
               numLegs = 4; // This works, as numLegs is private in Dog
               numTeeth = 42; // This works, as numTeeth is protected in Dog
+              cout << "Dog has " << numLegs << " legs and " << numTeeth << " teeth " <<"age "<< setAge()<< endl;
+
        }
  };
  int main() {
@@ -26,6 +33,11 @@ public:
         // dog.numLegs = 4; // Error: 'numLegs' is private in 'Dog'
         // dog.numTeeth = 42; // Error: 'numTeeth' is protected in 'Dog'
         cout << dog.speak() << endl; // This will work
+        dog.getdata();
         return 0;
 
  }
+
+// Output:
+// bark!
+// Dog has 4 legs and 42 teeth age 6

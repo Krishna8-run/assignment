@@ -18,7 +18,7 @@ public:
               age = 5; //  'age' is protected in 'Animal'
               numLegs = 4; // This works, as numLegs is private in Dog
               numTeeth = 42; // This works, as numTeeth is protected in Dog
-              cout << "Dog has " << numLegs << " legs and " << numTeeth << " teeth." <<"age"<<age<< endl;
+              cout << "Dog has " << numLegs << " legs and " << numTeeth << " teeth " <<"age "<<age<< endl;
        }
  };
  int main() {
@@ -31,3 +31,7 @@ public:
         return 0;
 
  }
+// Output:
+// bark!
+// Dog has 4 legs and 42 teeth age 5
+
