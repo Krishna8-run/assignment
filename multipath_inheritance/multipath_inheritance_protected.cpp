@@ -16,14 +16,14 @@ public:
 };
 
 // Base1 and Base2 inherit from GrandBase using virtual protected inheritance
-class Base1 : virtual protected GrandBase {
+class Base1 : virtual public GrandBase { //we use virtual inheritance to avoid ambiguity
 public:
     void showBase1() {
-        cout << "Base1: pub=" << pub << ", prot=" << prot << endl;
+        cout << "Base1: pub=" << pub << ", prot=" << prot <<endl;
     }
 };
 
-class Base2 : virtual protected GrandBase {
+class Base2 : virtual protected GrandBase { //we use virtual inheritance to avoid ambiguity
 public:
     void showBase2() {
         cout << "Base2: pub=" << pub << ", prot=" << prot << endl;
@@ -57,7 +57,7 @@ public:
 int main() {
     cout << "\n--- DerivedPublic ---\n";
     DerivedPublic obj1;
-    obj1.show();
+    obj1.show(); // Show GrandBase members 
     obj1.showBase1();
     obj1.showBase2();
     obj1.showDerived();
@@ -73,3 +73,16 @@ int main() {
 
     return 0;
 }
+
+/* Output:
+ --- DerivedPublic ---
+ GrandBase: priv=1, prot=2, pub=3 
+ Base1: pub=3, prot=2
+ Base2: pub=3, prot=2
+ DerivedPublic accessing pub=3, prot=2
+
+ --- DerivedProtected ---
+ DerivedProtected accessing pub=3, prot=2
+
+ --- DerivedPrivate ---
+ DerivedPrivate accessing pub=3, prot=2 */

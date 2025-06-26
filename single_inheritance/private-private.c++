@@ -36,3 +36,9 @@ public:
         return 0;
 
  }
+
+ /*Output:
+ bark!
+ Dog has 4 legs and 42 teeth age 6   
+ 
+ */

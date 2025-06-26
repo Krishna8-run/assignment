@@ -36,7 +36,7 @@ public:
 
 
 
-// Output:
-// bark!
-// Dog has 4 legs and 42 teeth age 5
+ /*Output:
+ bark!
+ Dog has 4 legs and 42 teeth age 5  */
 
