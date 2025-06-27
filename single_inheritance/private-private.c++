@@ -1,3 +1,5 @@
+//SINGLE INHERITANCE
+
 #include <iostream>
 using namespace std;
 class Animal{
@@ -40,5 +42,5 @@ public:
  /*Output:
  bark!
  Dog has 4 legs and 42 teeth age 6   
- 
+
  */
